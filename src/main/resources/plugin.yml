@@ -1,0 +1,16 @@
+name: MyFirstPlugin
+version: '${project.version}'
+main: me.heymydude.myfirstplugin.MyFirstPlugin
+api-version: 1.18
+commands:
+  god:
+    description: Become invincible
+    usage: /<command>
+    aliases:
+      - pro
+      - kodymode
+  wand:
+    description: Become invincible
+    usage: /<command>
+    aliases:
+      - wand
