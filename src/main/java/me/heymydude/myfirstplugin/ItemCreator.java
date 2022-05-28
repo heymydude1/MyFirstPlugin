@@ -25,7 +25,7 @@ public class ItemCreator {
         this(new ItemStack(material, 1, data));
     }
 
-    public ItemCreator(boolean itemStack) {
+    public ItemCreator(ItemStack itemStack) {
         this(itemStack, 0);
     }
 

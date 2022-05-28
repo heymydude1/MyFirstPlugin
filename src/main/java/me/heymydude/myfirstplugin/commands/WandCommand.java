@@ -16,7 +16,7 @@ public class WandCommand implements CommandExecutor {
             return true;
         }
         Player player = (Player) sender;
-        if (cmd.getName().equalsIgnoreCase("give-wand")) {
+        if (cmd.getName().equalsIgnoreCase("givewand")) {
             player.getInventory().addItem(ItemManager.wand);
         }
 

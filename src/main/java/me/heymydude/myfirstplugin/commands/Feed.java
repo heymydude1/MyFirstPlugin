@@ -4,8 +4,8 @@ import me.heymydude.myfirstplugin.Msg;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class FeedCommand {
-    public FeedCommand() {
+public class Feed {
+    public Feed() {
         new CommandBase("feed", true) {
             @Override
             public boolean onCommand(CommandSender sender, String [] arguments) {

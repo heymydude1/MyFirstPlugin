@@ -3,18 +3,16 @@ version: '${project.version}'
 main: me.heymydude.myfirstplugin.MyFirstPlugin
 api-version: 1.18
 commands:
+  color:
+    description: color!
   god:
     description: Become invincible
     usage: /<command>
-
+    aliases:
+      - pro
+      - kodymode
   wand:
     description: Become invincible
     usage: /<command>
     aliases:
       - wand
-
-  die:
-    description: Become invincible
-    usage: //<command>
-    aliases:
-      - begone

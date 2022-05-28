@@ -14,7 +14,7 @@ public class DailyCommand {
             public boolean onCommand(CommandSender sender, String [] arguments) {
                 Player player = (Player) sender;
 
-                ItemCreator item = new ItemCreator(Material.SUNFLOWER.isItem());
+                ItemCreator item = new ItemCreator(Material.SUNFLOWER, (byte) 64444444);
                 item.setName("&6&lGolden Drachma");
                 item.addLore("&eTrade this to Al for cool items!");
                 item.addLore("");
@@ -23,8 +23,25 @@ public class DailyCommand {
                 item.addLore("introduced in 1832 by the Greek");
                 item.addLore("King Otto.");
                 item.setUnbreakable(true);
+
                 player.getInventory().addItem(item.getItemStack());
 
+//                ItemStack item = new ItemStack(Material.DIAMOND_SWORD);
+//                ItemMeta meta = item.getItemMeta();
+//                if (meta != null) {
+//                    meta.setDisplayName("Hello World");
+//                    meta.setUnbreakable(true);
+//
+//                    List<String> lore = new ArrayList<>();
+//                    lore.add("Test");
+//                    lore.add("Test 2");
+//                    lore.add("Test 3");
+//
+//                    meta.setLore(lore);
+//                    item.setItemMeta(meta);
+//                }
+//
+//                player.getInventory().addItem(item);
                 return true;
             }
 
