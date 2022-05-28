@@ -13,21 +13,21 @@ public class GodCommand implements CommandExecutor
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        //See if a player ran the command
+     //chooses what world ur in
         if (sender instanceof Player p){
             if (p.getWorld().getName().equalsIgnoreCase("Bedwars_Lobby")) {
 
 
-            //Get the Player object to be able to do things
 
-            //See if they are invulnerable (cant be hurt)
+
+            //See if they are invulnerable (can't be hurt)
             if (p.isInvulnerable()){
                 //since they are, disable it and send them a message
                 p.setInvulnerable(false);
-                p.sendMessage(ChatColor.RED + "God mode disabled.");
+                p.sendMessage(ChatColor.RED + "God mode is disabled.");
             }else{
                 p.setInvulnerable(true);
-                p.sendMessage(ChatColor.GREEN + "God mode enabled.");
+                p.sendMessage(ChatColor.GREEN + "God mode is enabled.");
             }
 
         }else{

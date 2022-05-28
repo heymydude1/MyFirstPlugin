@@ -22,36 +22,25 @@ public final class MyFirstPlugin extends JavaPlugin {
         System.out.println("My first plugin has started!!! Hello!!!");
 
 
-        //Registering Listeners
+        /* Registering Listeners */
         getServer().getPluginManager().registerEvents(new EXPBottleBreakListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerLeavesBedListener(), this);
         getServer().getPluginManager().registerEvents(new ShearSheepListener(), this);
         getServer().getPluginManager().registerEvents(new JoinLeaveListener(), this);
+        getServer().getPluginManager().registerEvents(new Events(), this);
+
+
 
         //Registering Commands
         Objects.requireNonNull(getCommand("god")).setExecutor(new GodCommand());
-        // getCommand("feed").setExecutor(new FeedCommand());
-        // getCommand("die").setExecutor(new DieCommand());
-        Objects.requireNonNull(getCommand("wand")).setExecutor(new Commands());
-        new Feed();
-        new Sword();
-        new DailyCommand();
-        new SwordCommand();
-        new Sun();
+        Objects.requireNonNull(getCommand("wand")).setExecutor(new WandCommand());
+        Objects.requireNonNull(getCommand("die")).setExecutor(new DieCommand());
 
+        new DailyCommand();
+        new TestSwordCommand();
+        new FeedCommand();
     }
 
-
-
-    //another event for when a player leaves a bed
-    /*@EventHandler
-    public void onLeaveBed(PlayerBedLeaveEvent event){
-
-        //Get the player associated with this event
-        Player player = event.getPlayer();
-        //send them a message so we know it works
-        player.sendMessage("You left a bed!!! Dork.");
-    }*/
 
 
     public static MyFirstPlugin getInstance() {

@@ -18,7 +18,7 @@ public class ShearSheepListener implements Listener
         //check to see if the entity that was sheared was a sheep
         //if it was, cancel the event to prevent it from being sheared
         //if it wasn't, let it be sheared
-        if  (e.getBlockPlaced().getType() == Material.SUNFLOWER) {
+        if  (e.getBlockPlaced().getType() == Material.ACACIA_BOAT) {
             player.sendMessage("This is a sheep. You can't do that.");
             e.setCancelled(true); //cancel the event. Provided by Cancellable interface
         } else {
@@ -26,3 +26,4 @@ public class ShearSheepListener implements Listener
         }
     }
 }
+/// TODO: 5/28/2022 Change This

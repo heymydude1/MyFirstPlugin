@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Commands implements CommandExecutor {
+public class WandCommand implements CommandExecutor {
 
 
     @Override
@@ -16,7 +16,7 @@ public class Commands implements CommandExecutor {
             return true;
         }
         Player player = (Player) sender;
-        if (cmd.getName().equalsIgnoreCase("givewand")) {
+        if (cmd.getName().equalsIgnoreCase("give-wand")) {
             player.getInventory().addItem(ItemManager.wand);
         }
 

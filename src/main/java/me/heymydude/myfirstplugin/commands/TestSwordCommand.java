@@ -9,23 +9,22 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sun {
-      public Sun()
+public class TestSwordCommand {
+      public TestSwordCommand()
      {
-        new CommandBase("sun", true) {
+        new CommandBase("testsword", true) {
 
             @Override
             public boolean onCommand(CommandSender sender, String [] arguments) {
                 Player player = (Player) sender;
 
 
-                ItemStack item = new ItemStack(Material.SUNFLOWER);
+                ItemStack item = new ItemStack(Material.DIAMOND_SWORD, 1, (byte) 1 );
                 ItemMeta meta = item.getItemMeta();
                 if (meta != null) {
-                    meta.setDisplayName("Hello World");
+                    meta.setDisplayName("Test Sword");
                     meta.setUnbreakable(true);
-                   // Integer GoldenDrachma = 124321;
-                    meta.setCustomModelData(123);
+
                     List<String> lore = new ArrayList<>();  //Arrays.asList("", "");
                     lore.add("Test");
                     lore.add("Test 2");
@@ -45,9 +44,10 @@ public class Sun {
 
             @Override
             public String getUsage() {
-                return "/sun";
+                return "/testsword";
             }
 
         }.enableDelay(2);
    }
 }
+/// TODO: 5/28/2022  Change Name or Even Delete Class
